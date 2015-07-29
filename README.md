@@ -2,6 +2,8 @@
 
 This was originally written by [NI0X](http://rcsettings.com/index.php/viewdownload/13-lua-scripts/144-dji-phantom-naza-icon-telemetry-script) and modified by [pobskil](http://www.reddit.com/r/Multicopter/comments/37eskq/getting_in_on_the_lua_telemetry_scripts_running_a/).
 
+This has been tested and works on OpenTX 2.0. It will **not** work correctly in OpenTX 2.1.
+
 I integrated the bits of their code I liked and refactored it to slim it down.
 
 ### Features
