@@ -17,6 +17,8 @@ I integrated the bits of their code I liked and refactored it to slim it down.
 ### Configuration
 You may have to edit the LUA script based on how you have your model configured. On my model, I arm via the SA switch, and use the SE switch to toggle between flight modes. Changing these channels is as easy as replacing MIXSRC_SX in the code with whichever switch you prefer.
 
+Additionally, you may need to change batt_s from the default of 'vfas' to 'a2' if you're using a [FrSky Battery Voltage Sensor](http://www.alofthobbies.com/battery-voltage-sensor.html).
+
 ### Installation
 * Copy the images in the `BMP` directory to `/SCRIPTS/BMP/` on your transmitter's SD card.
 * Copy the `modelname` directory to `/SCRIPTS/<modelname>` on your transmitter's SD card, where <modelname> is the exact name of the model you want to associate this script with.

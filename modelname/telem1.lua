@@ -4,7 +4,8 @@ local function run(event)
 		return math.floor(num * mult + 0.5) / mult
 	end
 
-	local batt_s = getValue('a2')
+	local batt_s = 'vfas'
+	local batt_t = getValue(batt_s)
 	local batt_v = {}
 	local img_path = '/SCRIPTS/BMP/'
 	local percent = 0
@@ -18,12 +19,12 @@ local function run(event)
 	batt_v[5] = { low = 18.5, high = 21.0 }
 	batt_v[6] = { low = 22.2, high = 25.2 }
 
-	if batt_s > 3 then
+	if batt_t > 3 then
 		-- Only show voltage and cell count if battery is connected
-		batt_t = math.ceil(batt_s / 4.25)
-		percent = (batt_s - batt_v[batt_t]['low']) * (100 / (batt_v[batt_t]['high'] - batt_v[batt_t]['low']))
-		lcd.drawChannel(4, 55, 'a2', LEFT)
-		lcd.drawText(lcd.getLastPos() + 1, 55, batt_t .. 'S', 0)
+		batt_c = math.ceil(batt_t / 4.25)
+		percent = (batt_t - batt_v[batt_c]['low']) * (100 / (batt_v[batt_c]['high'] - batt_v[batt_c]['low']))
+		lcd.drawChannel(4, 55, batt_s, LEFT)
+		lcd.drawText(lcd.getLastPos() + 1, 55, batt_c .. 'S', 0)
 	end
 
 	if percent > 0 then
